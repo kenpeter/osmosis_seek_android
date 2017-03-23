@@ -1,7 +1,16 @@
 // need react and component
 import React, { Component } from 'react';
 // text from native
-import { Text, ScrollView, View, StyleSheet, TouchableHighlight, Dimensions } from 'react-native';
+import {
+  Text,
+  ScrollView,
+  View,
+  StyleSheet,
+
+  TouchableHighlight,
+  Dimensions,
+  Linking
+} from 'react-native';
 
 //
 import Image from 'react-native-scalable-image';
@@ -14,6 +23,8 @@ import colors from 'HSColors';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import axios from 'axios';
+
+import OpenURLButton from './OpenURLButton';
 
 // empty style
 let styles = {};
@@ -31,7 +42,7 @@ class ListComponent extends Component {
   }
 
   componentDidMount() {
-    let url = 'http://seekback.shopshop.space/job/list?limit=10';
+    let url = 'http://seekback.shopshop.space/job/list';
     axios
       .get(url)
       .then(res => {
@@ -57,13 +68,19 @@ class ListComponent extends Component {
           <Card containerStyle={{padding: 0}} >
           {
             this.state.jobs.map((u, i) => {
+              const myText = u.title + '\n\n' +
+                u.description;
+
               return (
                 <ListItem
                   key={i}
                   roundAvatar
-                  title={u.title}
-                />
-
+                  title={myText}
+                  subtitle={
+                    <OpenURLButton url={u.url} />
+                  }
+                >
+                </ListItem>
               );
             })
           }
