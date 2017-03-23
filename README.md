@@ -2,7 +2,7 @@
 
 Srape seek.com.au data and display data on android phone with react native.
 
-## Miscc
+## Misc
 * https://facebook.github.io/react-native/docs/using-a-listview.html
 * https://www.tutorialspoint.com/react_native/react_native_flexbox.htm
 * https://hackernoon.com/react-native-new-flatlist-component-30db558c7a5b#.2fwqovkyk
