@@ -1,13 +1,13 @@
 {
-   "name": "hljandroid",
+   "name": "seekandroid",
    "icon": "https://cdn3.iconfinder.com/data/icons/linecons-free-vector-icons-pack/32/news-128.png",
    "version": "1.0.0",
-   "slug": "hljandroid",
+   "slug": "seekandroid",
    "sdkVersion": "15.0.0",
    "ios": {
-     "bundleIdentifier": "org.kenpeter.hljandroid"
+     "bundleIdentifier": "org.kenpeter.seekandroid"
    },
    "android": {
-     "package": "org.kenpeter.hljandroid"
+     "package": "org.kenpeter.seekandroid"
    }
  }
